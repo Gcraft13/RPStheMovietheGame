@@ -18,18 +18,34 @@ function getComputerChoice() {
     default:
       console.log("please pick a weapon!");
   }
-  console.log(computerChoice);
+  return computerChoice;
 }
 
 function getPlayerChoice() {
   let playerChoice = prompt(
     "Please select your weapon: rock, scissors, or paper"
   );
-  if (playerChoice != "") {
-    alert("Please select a weapon");
-  }
-  console.log(playerChoice);
+
+  return playerChoice;
 }
 
-getPlayerChoice();
-getComputerChoice();
+function playGame(numberOfRounds) {
+  let playerScore = 0;
+  let computerScore = 0;
+
+  function playRound(humanChoice, botChoice) {
+    if ((humanChoice == "rock") & (botChoice == "paper")) {
+      console.log("Computer Wins!");
+      computerScore += 1;
+    }
+  }
+
+  for (i = 0; i < numberOfRounds; i++) {
+    const newHumanChoice = getPlayerChoice();
+    const newBotChoice = getComputerChoice();
+    playRound(newHumanChoice, newBotChoice);
+    console.log(newHumanChoice, newBotChoice);
+  }
+}
+
+playGame(5);
