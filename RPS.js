@@ -35,36 +35,42 @@ function playGame(numberOfRounds) {
 
   function playRound(humanChoice, botChoice) {
     if (humanChoice == "rock" && botChoice == "paper") {
+      console.log(humanChoice, computerChoice);
       console.log("Computer Wins!");
       computerScore += 1;
     } else if (humanChoice == "rock" && botChoice == "scissors") {
+      console.log(humanChoice, computerChoice);
       console.log("Player Wins!");
       playerScore += 1;
     } else if (humanChoice == "scissors" && botChoice == "rock") {
+      console.log(humanChoice, computerChoice);
       console.log("Computer Wins!");
       computerScore += 1;
     } else if (humanChoice == "scissors" && botChoice == "paper") {
+      console.log(humanChoice, computerChoice);
       console.log("Players Wins!");
       playerScore += 1;
     } else if (humanChoice == "paper" && botChoice == "rock") {
+      console.log(humanChoice, computerChoice);
       console.log("Players Wins!");
       playerScore += 1;
     } else if (humanChoice == "paper" && botChoice == "scissors") {
+      console.log(humanChoice, computerChoice);
       console.log("Computer Wins!");
       computerScore += 1;
     } else {
+      console.log(humanChoice, computerChoice);
       console.log("It's a draw");
     }
+
+    console.log(playerScore, computerScore);
   }
 
   for (i = 0; i < numberOfRounds; i++) {
     const newHumanChoice = getPlayerChoice();
     const newBotChoice = getComputerChoice();
     playRound(newHumanChoice, newBotChoice);
-    console.log(newHumanChoice, newBotChoice);
   }
-  console.log(playerScore, computerScore);
-
   if (playerScore > computerScore) {
     console.log("Player wins the game!");
   } else if (computerScore > playerScore) {
