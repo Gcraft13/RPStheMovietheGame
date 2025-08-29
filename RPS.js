@@ -48,11 +48,11 @@ function playGame(numberOfRounds) {
       computerScore += 1;
     } else if (humanChoice == "scissors" && botChoice == "paper") {
       console.log(humanChoice, computerChoice);
-      console.log("Players Wins!");
+      console.log("Player Wins!");
       playerScore += 1;
     } else if (humanChoice == "paper" && botChoice == "rock") {
       console.log(humanChoice, computerChoice);
-      console.log("Players Wins!");
+      console.log("Player Wins!");
       playerScore += 1;
     } else if (humanChoice == "paper" && botChoice == "scissors") {
       console.log(humanChoice, computerChoice);
